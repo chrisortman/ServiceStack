@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{588C4C7A-2732-4121-B994-E972FF4480EA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServiceStack</RootNamespace>
+    <AssemblyName>ServiceStack.Interfaces.Portable</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile2</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\ServiceStack.Interfaces\ServiceHost\ApiAttribute.cs">
+      <Link>ServiceHost\ApiAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\ServiceStack.Interfaces\ServiceHost\ApiMemberAttribute.cs">
+      <Link>ServiceHost\ApiMemberAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\ServiceStack.Interfaces\ServiceHost\ApiResponse.cs">
+      <Link>ServiceHost\ApiResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\ServiceStack.Interfaces\ServiceHost\EndpointAttributes.cs">
+      <Link>ServiceHost\EndpointAttributes.cs</Link>
+    </Compile>
+    <Compile Include="..\ServiceStack.Interfaces\ServiceHost\Feature.cs">
+      <Link>ServiceHost\Feature.cs</Link>
+    </Compile>
+    <Compile Include="..\ServiceStack.Interfaces\ServiceHost\IService.cs">
+      <Link>ServiceHost\IService.cs</Link>
+    </Compile>
+    <Compile Include="..\ServiceStack.Interfaces\ServiceHost\RestrictAttribute.cs">
+      <Link>ServiceHost\RestrictAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\ServiceStack.Interfaces\ServiceHost\RouteAttribute.cs">
+      <Link>ServiceHost\RouteAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\ServiceStack.Interfaces\ServiceInterface.ServiceModel\IHasResponseStatus.cs">
+      <Link>ServiceInterface.ServiceModel\IHasResponseStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\ServiceStack.Interfaces\ServiceInterface.ServiceModel\ResponseError.cs">
+      <Link>ServiceInterface.ServiceModel\ResponseError.cs</Link>
+    </Compile>
+    <Compile Include="..\ServiceStack.Interfaces\ServiceInterface.ServiceModel\ResponseStatus.cs">
+      <Link>ServiceInterface.ServiceModel\ResponseStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\ServiceStack.Interfaces\Service\IOneWayClient.cs">
+      <Link>Service\IOneWayClient.cs</Link>
+    </Compile>
+    <Compile Include="..\ServiceStack.Interfaces\Service\IReplyClient.cs">
+      <Link>Service\IReplyClient.cs</Link>
+    </Compile>
+    <Compile Include="..\ServiceStack.Interfaces\Service\IRestClient.cs">
+      <Link>Service\IRestClient.cs</Link>
+    </Compile>
+    <Compile Include="..\ServiceStack.Interfaces\Service\IRestClientAsync.cs">
+      <Link>Service\IRestClientAsync.cs</Link>
+    </Compile>
+    <Compile Include="..\ServiceStack.Interfaces\Service\IServiceClient.cs">
+      <Link>Service\IServiceClient.cs</Link>
+    </Compile>
+    <Compile Include="..\ServiceStack.Interfaces\Service\IServiceClientAsync.cs">
+      <Link>Service\IServiceClientAsync.cs</Link>
+    </Compile>
+    <Compile Include="..\ServiceStack.Interfaces\Service\IStreamWriter.cs">
+      <Link>Service\IStreamWriter.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
